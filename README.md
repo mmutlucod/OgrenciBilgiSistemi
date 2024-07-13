@@ -1,6 +1,6 @@
 # Öğrenci Bilgi Sistemi
 
-Bu proje, ASP.NET MVC yapısı kullanılarak kodlanmış ve web tabanlı olarak hazırlanmıştır. Nesne Yönelimli Programlama (OOP) prensiplerine göre geliştirilmiş olup, ilişkisel bir veritabanı kullanmaktadır.
+Bu proje, ASP.NET Core 8.0 MVC yapısı kullanılarak kodlanmış ve web tabanlı olarak hazırlanmıştır. Nesne Yönelimli Programlama (OOP) prensiplerine göre geliştirilmiş olup, ilişkisel bir veritabanı kullanmaktadır. Proje, öğrenci ve öğretim elemanı kullanıcıları için ayrı paneller sunar ve kullanıcı dostu, responsive bir arayüze sahiptir.
 
 ## Proje Özellikleri
 
@@ -10,6 +10,13 @@ Bu proje, ASP.NET MVC yapısı kullanılarak kodlanmış ve web tabanlı olarak 
 - Öğretim elemanları için ders programı, sınav notları girişi, danışmanlık işlemleri gibi özellikler.
 - Responsive kullanıcı arayüzü.
 
+## Teknolojiler
+
+- **Backend:** ASP.NET Core 8.0
+- **Frontend:** Razor Pages, HTML, CSS, JavaScript
+- **Veritabanı:** Microsoft SQL Server
+- **ORM:** Entity Framework Core
+- **Unit Testler:** xUnit
 ## Veritabanı Tasarımı
 
 Proje kapsamında aşağıdaki tablolar oluşturulmuştur:
@@ -47,59 +54,67 @@ Proje kapsamında aşağıdaki tablolar oluşturulmuştur:
 - **Not Girişi:** Sınav sonuçlarını girme ve güncelleme.
 - **Danışmanlık:** Danışmanlık yaptığı öğrencilerin listesi.
 
+## Unit Testler
+
+Projede, birim testler (unit tests) için xUnit kullanılmıştır. Unit testler, `obsProject.Tests` projesinde yer almakta ve projedeki temel işlevlerin doğruluğunu test etmektedir. Aşağıda bazı testler örnek olarak verilmiştir:
+
+- **AnasayfaTestController:** `AnasayfaController` sınıfının giriş ve kayıt işlemlerini doğru gerçekleştirdiğini test eder.
+- **OgrenciTestController:** `OgrenciController` sınıfının metodlarının doğru çalıştığını test eder.
+- **OgretimElemaniTestController:** `OgretimElemaniController` sınıfının metodlarının doğru çalıştığını test eder.
+
 ## Ekran Görüntüleri
 
 ### Öğrenci Paneli
 
-1. **Özlük Bilgileri**
-   ![Özlük Bilgileri](screenshots/ogrenci/1.png)
+1. **Bölüm Müfredatı**
+   ![Bölüm Müfredatı](screenshots/ogrenci/1.png)
    
-2. **Transkript**
-   ![Transkript](screenshots/ogrenci/2.png)
+2. **Dönem Dersleri**
+   ![Dönem Dersleri](screenshots/ogrenci/2.png)
    
 3. **Ders Programı**
    ![Ders Programı](screenshots/ogrenci/3.png)
    
-4. **Dönem Dersleri**
-   ![Dönem Dersleri](screenshots/ogrenci/4.png)
+4. **Ders Kayıt**
+   ![Ders Kayıt](screenshots/ogrenci/4.png)
    
-5. **Bölüm Müfredatı**
-   ![Bölüm Müfredatı](screenshots/ogrenci/5.png)
+5. **Sınav Takvimi**
+   ![Sınav Takvimi](screenshots/ogrenci/5.png)
    
 6. **Sınav Notları**
    ![Sınav Notları](screenshots/ogrenci/6.png)
    
-7. **Sınav Takvimi**
-   ![Sınav Takvimi](screenshots/ogrenci/7.png)
+7. **Transkript**
+   ![Transkript](screenshots/ogrenci/7.png)
    
-8. **Ders Kayıt**
-   ![Ders Kayıt](screenshots/ogrenci/8.png)
+8. **Özlük Bilgileri**
+   ![Özlük Bilgileri](screenshots/ogrenci/8.png)
 
 ### Öğretim Elemanı Paneli
 
-1. **Özlük Bilgileri**
-   ![Özlük Bilgileri](screenshots/egitmen/1.png)
+1. **Bölüm Müfredatı**
+   ![Bölüm Müfredatı](screenshots/egitmen/1.png)
    
-2. **Danışmanlık Yapılan Öğrenciler**
-   ![Danışmanlık Yapılan Öğrenciler](screenshots/egitmen/2.png)
+2. **Verilen Dersler**
+   ![Verilen Dersler](screenshots/egitmen/2.png)
    
-3. **Bölüm Müfredatı**
-   ![Bölüm Müfredatı](screenshots/egitmen/3.png)
+3. **Ders Kayıt Onayı**
+   ![Ders Kayıt Onayı](screenshots/egitmen/3.png)
    
-4. **Verilen Dersler**
-   ![Verilen Dersler](screenshots/egitmen/4.png)
+4. **Ders Programı**
+   ![Ders Programı](screenshots/egitmen/4.png)
    
-5. **Ders Kayıt Onayı**
-   ![Ders Kayıt Onayı](screenshots/egitmen/5.png)
+5. **Sınav Listesi**
+   ![Sınav Listesi](screenshots/egitmen/5.png)
    
-6. **Ders Programı**
-   ![Ders Programı](screenshots/egitmen/6.png)
+6. **Sınav Notu Girişi**
+   ![Sınav Notu Girişi](screenshots/egitmen/6.png)
    
 7. **Sınav Tanımlama**
    ![Sınav Tanımlama](screenshots/egitmen/7.png)
    
-8. **Sınav Listesi**
-   ![Sınav Listesi](screenshots/egitmen/8.png)
+8. **Özlük Bilgileri**
+   ![Özlük Bilgileri](screenshots/egitmen/8.png)
    
-9. **Sınav Not Girişi**
-   ![Sınav Not Girişi](screenshots/egitmen/9.png)
+9. **Danışamnlık İşlemleri**
+   ![Danışamnlık İşlemleri](screenshots/egitmen/9.png)
