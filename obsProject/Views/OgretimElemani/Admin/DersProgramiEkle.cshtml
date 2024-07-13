@@ -1,0 +1,43 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-warning" role="alertdialog">
+        @TempData["Message"]
+    </div>
+}
+
+<form method="post" asp-controller="OgretimElemani" asp-action="DersProgramiEkle">
+
+    <div class="mb-3">
+        <select class="form-select" name="DersAcmaID" required>
+            <option selected value="">Ders Seçiniz </option>
+            @foreach (var d in ViewBag.Dersler)
+            {
+                <option value="@d.DersAcmaID">@d.DersKodu @d.DersAdi</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select" name="DersLikID" required>
+            <option selected value="">Derslik Seçiniz </option>
+            @foreach (var d in ViewBag.DerslikListesi)
+            {
+                <option value="@d.DerslikID">@d.DerslikAdi</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select" name="GunID" required>
+            <option selected value="">Gün Seçiniz </option>
+            @foreach (var g in ViewBag.gunListesi)
+            {
+                <option value="@g.GunID">@g.GunAdi</option>
+            }
+        </select>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

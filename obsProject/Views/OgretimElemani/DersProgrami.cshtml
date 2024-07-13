@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders Programı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .ders-programi {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: darkgray;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="ders-programi">
+        <h1>Ders Programı</h1>
+
+        <table style="width:100%">
+            <tr>
+                <th>GÜN</th>
+                <th>SAAT</th>
+                <th>DERS</th>
+                <th>EĞİTİMCI</th>
+            </tr>
+
+            @{
+                var groupedData = ((IEnumerable<dynamic>)ViewBag.resultData).GroupBy(item => item.GunAdi);
+            }
+
+            @foreach (var group in groupedData)
+            {
+                <tr>
+                    <td colspan="4" style="background-color: darkgray; color: white;">@group.Key</td>
+                </tr>
+
+                @foreach (var item in group)
+                {
+                    <tr>
+                        <td></td>
+                        <td>@item.DersSaatiAdi</td>
+                        <td>@item.DersAdi</td>
+                        <td>@item.OgretimElemaniAdi @item.OgretimElemaniSoyadi</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+    <br />
+    <br />
+    <br />
+</body>
+</html>

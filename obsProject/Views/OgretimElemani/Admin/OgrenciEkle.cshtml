@@ -1,0 +1,82 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Message"]
+    </div>
+}
+
+<form method="post" asp-controller="OgretimElemani" asp-action="OgrenciEkle">
+
+    <div class="mb-3">
+        <select class="form-select" name="BolumID" required>
+            <option selected value="">Bölüm Seçiniz </option>
+            @foreach (var b in ViewBag.bolumListesi)
+            {
+                <option value="@b.BolumID">@b.BolumAdi</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="OgrenciNo">Öğrenci No: </label>
+        <input type="text" class="form-control" name="OgrenciNo">
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select" name="OgrenciDurumID" required>
+            <option selected value="">Öğrenci Durumu Seçiniz </option>
+            @foreach (var o in ViewBag.ogrenciDurumListesi)
+            {
+                <option value="@o.OgrenciDurumID">@o.OgrenciDurumAdi</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="KayitTarihi">Kayıt Tarihi: </label>
+        <input type="date" class="form-control" name="KayitTarihi">
+    </div>
+
+    <div class="mb-3">
+        <label for="AyrilmaTarihi">Ayrılma Tarihi: </label>
+        <input type="date" class="form-control" name="AyrilmaTarihi">
+    </div>
+
+    <div class="mb-3">
+        <label for="Adi">Öğrenci Adı: </label>
+        <input type="text" class="form-control" name="Adi">
+    </div>
+    <div class="mb-3">
+        <label for="Soyadi">Öğrenci Soyadı: </label>
+        <input type="text" class="form-control" name="Soyadi">
+    </div>
+    <div class="mb-3">
+        <label for="TCKimlikNo">TC Kimlik Numarası: </label>
+        <input type="text" class="form-control" name="TCKimlikNo">
+    </div>
+    <div class="mb-3">
+        <select class="form-select" name="CinsiyetID" required>
+            <option selected value="">Cinsiyet Seçiniz </option>
+            @foreach (var c in ViewBag.cinsiyetListesi)
+            {
+                <option value="@c.CinsiyetID">@c.CinsiyetAdi</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="DogumTarihi">Doğum Tarihi: </label>
+        <input type="date" class="form-control" name="DogumTarihi">
+    </div>
+    <div class="mb-3">
+        <select class="form-select" name="KullaniciID" required>
+            <option selected value="">Kullanıcı Seçiniz </option>
+            @foreach (var k in ViewBag.kullaniciListesi)
+            {
+                <option value="@k.KullaniciID">@k.KullaniciAdi</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

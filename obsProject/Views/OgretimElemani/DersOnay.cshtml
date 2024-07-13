@@ -1,0 +1,76 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h4>Ders Kayıt Onayı</h4>
+
+<html>
+<head>
+
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="veriGoster"></div>
+        <div class="row mt-3">
+            <div class="col-md-12">
+
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Öğrenci No</th>
+                            <th>Öğrenci Adı</th>
+                            <th>Öğrenci Soyadı</th>
+                            <th>Ders Durum</th>
+                            <th>İşlemler</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.ResultData)
+                        {
+                            <tr>
+                                <td>@item.OgrenciNo</td>
+                                <td>@item.OgrenciAdi</td>
+                                <td>@item.OgrenciSoyadi</td>
+                                <td>@item.DersDurum</td>
+                                @if(item.DersDurumID == 1)
+                                {
+                                    <td>
+                                        <form method="post" asp-controller="OgretimElemani" asp-action="DersOnay">
+                                            <input hidden="" name="DersAlmaID" value="@item.DersAlmaID" />
+                                            <input hidden="" name="DersAcmaID" value="@item.DersAcmaID" />
+                                            <input hidden="" name="DersDurumID" value="3" />
+                                            <input hidden="" name="OgrenciID" value="@item.OgrenciID" />
+                                            <button type="submit" class="btn btn-primary">Onayla</button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form method="post" asp-controller="OgretimElemani" asp-action="DersRet">
+                                            <input hidden="" name="DersAlmaID" value="@item.DersAlmaID" />
+                                            <input hidden="" name="DersAcmaID" value="@item.DersAcmaID" />
+                                            <input hidden="" name="DersDurumID" value="2" />
+                                            <input hidden="" name="OgrenciID" value="@item.OgrenciID" />
+                                            <button type="submit" class="btn btn-danger">Ret</button>
+                                        </form>
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td></td>
+                                    <td></td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+﻿
+
+
+

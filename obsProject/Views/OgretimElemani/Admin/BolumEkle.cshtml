@@ -1,0 +1,55 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Message"]
+    </div>
+}
+
+<form method="post" asp-controller="OgretimElemani" asp-action="BolumEkle">
+
+    <div class="mb-3">
+        <label for="BolumAdi">Bolum Adı:</label>
+        <input type="text" class="form-control" name="BolumAdi">
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select" name="ProgramTuruID" required>
+            <option selected disabled value="">Program Türü Seçiniz </option>
+            @foreach (var pt in ViewBag.ProgramTurleri)
+            {
+                <option value="@pt.ProgramTuruID">@pt.ProgramTuruAdi</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select" name="OgretimTuruID" required>
+            <option selected value="">Öğretim Türü Seçiniz </option>
+            @foreach (var ot in ViewBag.ogretimTurleri)
+            {
+                <option value="@ot.OgretimTuruID">@ot.OgretimTuruAdi</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        
+        <select class="form-select" id="donemSelect" name="DilID" required>
+            <option selected disabled value="">Öğrenim Dili Seçiniz </option>
+            @foreach (var od in ViewBag.ogrenimDilleri)
+            {
+                <option value="@od.DilID">@od.DilAdi</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <div class="form-group">
+            <label for="input5">Web Adresi: </label>
+            <input type="text" class="form-control" name="WebAdresi">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,28 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Dersin Kodu</th>
+            <th>Dersin Adı</th>
+            <th>Sınav Türü</th>
+            <th>Sınavın Günü</th>
+            <th>Sınavın Saati</th>
+            <th>Sınavın Etki Oranı</th>
+            <th>Derslik Adı</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+        @foreach (var item in ViewBag.resultData)
+        {
+            <tr>
+                <td>@item.DersKodu</td>
+                <td>@item.DersAdi</td>
+                <td>@item.SinavTuruAdi</td>
+                <td>@item.SinavTarihi</td>
+                <td>@item.SinavSaati</td>
+                <td>@item.EtkiOrani</td>
+                <td>@item.DerslikAdi</td>
+            </tr>
+        }
+    </tbody>

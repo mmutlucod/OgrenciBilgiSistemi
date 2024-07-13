@@ -1,0 +1,167 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = obsProject
+build_property.RootNamespace = obsProject
+build_property.ProjectDir = C:\Users\umut_\OneDrive\Desktop\obs\obsProject\obsProject\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\umut_\OneDrive\Desktop\obs\obsProject\obsProject
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/AnaSayfa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hU2F5ZmFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/Hata/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGF0YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/Ogrenci/Ders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxEZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/Ogrenci/DersKayit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxEZXJzS2F5aXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/Ogrenci/DersProgrami.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxEZXJzUHJvZ3JhbWkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/Ogrenci/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/Ogrenci/Mufredat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxNdWZyZWRhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/Ogrenci/Profil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxQcm9maWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/Ogrenci/Sinav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxTaW5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/Ogrenci/SinavTakvimi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxTaW5hdlRha3ZpbWkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/Ogrenci/Transkript.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxUcmFuc2tyaXB0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Admin/AkademikDonemEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcQWRtaW5cQWthZGVtaWtEb25lbUVrbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Admin/BolumEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcQWRtaW5cQm9sdW1Fa2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Admin/DersAcmaEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcQWRtaW5cRGVyc0FjbWFFa2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Admin/DersEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcQWRtaW5cRGVyc0VrbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Admin/DersProgramiEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcQWRtaW5cRGVyc1Byb2dyYW1pRWtsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Admin/DersProgramiSaatEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcQWRtaW5cRGVyc1Byb2dyYW1pU2FhdEVrbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Admin/KullaniciEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcQWRtaW5cS3VsbGFuaWNpRWtsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Admin/MufredatEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcQWRtaW5cTXVmcmVkYXRFa2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Admin/OgrenciEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcQWRtaW5cT2dyZW5jaUVrbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Admin/OgretimElemaniEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcQWRtaW5cT2dyZXRpbUVsZW1hbmlFa2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Danismanlik.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcRGFuaXNtYW5saWsuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Degerlendirme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcRGVnZXJsZW5kaXJtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Ders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcRGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/DersOnay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcRGVyc09uYXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/DersProgrami.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcRGVyc1Byb2dyYW1pLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Mufredat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcTXVmcmVkYXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/NotDuzenle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcTm90RHV6ZW5sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/NotEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcTm90RWtsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Profil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcUHJvZmlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/Sinav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcU2luYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/SinavDuzenle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcU2luYXZEdXplbmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/OgretimElemani/SinavEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZXRpbUVsZW1hbmlcU2luYXZFa2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/umut_/OneDrive/Desktop/obs/obsProject/obsProject/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

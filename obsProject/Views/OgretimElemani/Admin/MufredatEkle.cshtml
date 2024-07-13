@@ -1,0 +1,51 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Message"]
+    </div>
+}
+
+<form method="post" asp-controller="OgretimElemani" asp-action="MufredatEkle">
+
+    <div class="mb-3">
+        <select class="form-select" name="DersDonemi" required>
+            <option selected value="">Ders Dönemi Seçiniz </option>
+            @for(var i = 1; i <= 12; i++)
+            {
+                <option value="@i">@i</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select" name="BolumID" required>
+            <option selected value="">Bölüm Seçiniz </option>
+            @foreach (var b in ViewBag.bolumListesi)
+            {
+                <option value="@b.BolumID">@b.BolumAdi</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select" name="DersHavuzuID" required>
+            <option selected value="">Ders Seçiniz </option>
+            @foreach (var d in ViewBag.dersListesi)
+            {
+                <option value="@d.DersHavuzuID">@d.DersAdi</option>
+            }
+        </select>
+    </div>
+
+
+    <input hidden="" class="form-control" name="AkademikYilID" value="1">
+
+    <div class="mb-3">
+        <input hidden="" type="text" class="form-control" name="AkademikDonemID" value="@ViewBag.sonDonem.AkademikDonemID" readonly>
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

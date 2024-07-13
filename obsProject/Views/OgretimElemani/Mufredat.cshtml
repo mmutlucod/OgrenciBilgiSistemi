@@ -1,0 +1,118 @@
+﻿
+<html>
+<head>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <h4>Bölüm Müfredatı</h4>
+            <div class="col-md-6 position-relative text-end">
+                <label for="validationTooltip04" class="form-label"></label>
+                
+                <select class="form-select" id="donemSelect" name="selectedDonem" required>
+                    <option selected disabled value="">Akademik Dönem Seçiniz </option>
+                    @foreach (var donem in ViewBag.akademikDonemler)
+                    {
+                        <option value="@donem.AkademikDonemID"  @(donem.AkademikDonemID == ViewBag.AkademikDonemID ? "selected" : "")>@donem.AkademikDonemAdi</option>
+                    }
+                </select>
+                <div class="invalid-tooltip">
+                    Please select a valid state.
+                </div>
+            </div>
+        </div><br />
+        <div id="veriGoster"></div>
+        <div class="row mt-3">
+            <div class="col-md-12">
+
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Dersin Kodu</th>
+                            <th>Dersin Adı</th>
+                            <th>Dersin Türü</th>
+                            <th>Dersin Dönemi</th>
+                            <th>Teorik (T)</th>
+                            <th>Uygulama (U)</th>
+                            <th>Kredi (K)</th>
+                            <th>ECTS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        @foreach (var item in ViewBag.ResultData)
+                        {
+                            <tr>
+                                <td>@item.DersKodu</td>
+                                <td>@item.DersAdi</td>
+                                <td>@item.DersTuruAdi</td>
+                                <td>@item.DersDonemi</td>
+                                <td>@item.Teorik</td>
+                                <td>@item.Uygulama</td>
+                                <td>@item.Kredi</td>
+                                <td>@item.ECTS</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#donemSelect").change(function () {
+                var selectedDonem = $(this).val();
+                var jsonData = { selectedDonem: selectedDonem };
+
+                $.ajax({
+                    url: 'https://localhost:7259/OgretimElemani/Mufredat',
+                    type: 'POST',
+                    data: JSON.stringify(jsonData),
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function (response) {
+                        console.log(response);
+                        displayData(response);
+                        // $("#veriGoster").html(response);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            });
+        });
+
+        function displayData(data) {
+            var tableBody = $('#tableBody');
+
+            tableBody.empty();
+
+            data.forEach(function (item) {
+                var row = "<tr>" +
+                    "<td>" + item.dersKodu + "</td>" +
+                    "<td>" + item.dersAdi + "</td>" +
+                    "<td>" + item.dersTuruAdi + "</td>" +
+                    "<td>" + item.dersDonemi + "</td>" +
+                    "<td>" + item.teorik + "</td>" +
+                    "<td>" + item.uygulama + "</td>" +
+                    "<td>" + item.kredi + "</td>" +
+                    "<td>" + item.ects + "</td>" +
+                    "</tr>";
+                tableBody.append(row);
+            });
+        }
+    </script>
+
+
+
+</body>
+</html>
+﻿
+
+
+

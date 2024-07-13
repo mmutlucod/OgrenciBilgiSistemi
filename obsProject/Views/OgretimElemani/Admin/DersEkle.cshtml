@@ -1,0 +1,74 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Message"]
+    </div>
+}
+
+<form method="post" asp-controller="OgretimElemani" asp-action="DersEkle">
+
+    <div class="mb-3">
+        <label for="DersKodu">Ders Kodu: </label>
+        <input type="text" class="form-control" name="DersKodu">
+    </div>
+
+    <div class="mb-3">
+        <label for="DersAdi">Ders Adı: </label>
+        <input type="text" class="form-control" name="DersAdi">
+    </div>
+
+    <div class="mb-3">
+        <label for="Teorik">Teorik: </label>
+        <input type="number" class="form-control" name="Teorik">
+    </div>
+
+    <div class="mb-3">
+        <label for="Uygulama">Uygulama: </label>
+        <input type="number" class="form-control" name="Uygulama">
+    </div>
+
+    <div class="mb-3">
+        <label for="Kredi">Kredi: </label>
+        <input type="number" class="form-control" name="Kredi">
+    </div>
+
+    <div class="mb-3">
+        <label for="ECTS">ECTS: </label>
+        <input type="number" class="form-control" name="ECTS">
+    </div>
+
+
+    <div class="mb-3">
+        <select class="form-select" name="DilID" required>
+            <option selected value="">Dil Seçiniz </option>
+            @foreach (var d in ViewBag.dilListesi)
+            {
+                <option value="@d.DilID">@d.DilAdi</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select" name="DersSeviyesiID" required>
+            <option selected value="">Ders Seviyesi Seçiniz </option>
+            @foreach (var ds in ViewBag.dersSeviyesiListesi)
+            {
+                <option value="@ds.DersSeviyesiID">@ds.DersSeviyesiAdi</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select" name="DersTuruID" required>
+            <option selected value="">Ders Türü Seçiniz </option>
+            @foreach (var dt in ViewBag.dersTuru)
+            {
+                <option value="@dt.DersTuruID">@dt.DersTuruAdi</option>
+            }
+        </select>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

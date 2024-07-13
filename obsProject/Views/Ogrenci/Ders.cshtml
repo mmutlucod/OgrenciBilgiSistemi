@@ -1,0 +1,58 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html>
+<head>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <h4>Dönem Dersleri</h4>
+        </div><br />
+        <div id="veriGoster"></div>
+        <div class="row mt-3">
+            <div class="col-md-12">
+
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Dersin Kodu</th>
+                            <th>Dersin Adı</th>
+                            <th>Dersin Türü</th>
+                            <th>Dersin Dönemi</th>
+                            <th>Teorik (T)</th>
+                            <th>Uygulama (U)</th>
+                            <th>Kredi (K)</th>
+                            <th>ECTS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.ResultData)
+                        {
+                            <tr>
+                                <td>@item.DersKodu</td>
+                                <td>@item.DersAdi</td>
+                                <td>@item.DersTuruAdi</td>
+                                <td>@item.DersDonemi</td>
+                                <td>@item.Teorik</td>
+                                <td>@item.Uygulama</td>
+                                <td>@item.Kredi</td>
+                                <td>@item.ECTS</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+﻿
+
+
+

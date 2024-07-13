@@ -1,0 +1,17 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Message"]
+    </div>
+}
+
+<form method="post" asp-controller="OgretimElemani" asp-action="AkademikDonemEkle">
+
+    <div class="mb-3">
+        <label for="AkademikDonemAdi">Akademik Dönem Adı Giriniz: </label>
+        <input type="text" class="form-control" name="AkademikDonemAdi">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

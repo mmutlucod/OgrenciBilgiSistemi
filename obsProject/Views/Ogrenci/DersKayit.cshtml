@@ -1,0 +1,95 @@
+﻿    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h3>Açılan Dersler</h3>
+<br />
+<br />
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["Message"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>Dersin Kodu ve Adı</th>
+        <th>Dersin Türü</th>
+        <th>Teorik</th>
+        <th>Uygulama</th>
+        <th>Kredi</th>
+        <th>ECTS</th>
+        <th>İşlem</th>
+    </tr>
+
+    <tbody id="tableBody">
+
+        
+
+        @foreach (var item in ViewBag.resultData)
+        {
+            <tr>
+                <td>@item.DersKodu @item.DersAdi</td>
+                <td>@item.DersTuruAdi</td>
+                <td>@item.Teorik</td>
+                <td>@item.Kredi</td>
+                <td>@item.Uygulama</td>
+                <td>@item.ECTS</td>
+                <td>
+                    <form method="post" asp-controller="Ogrenci" asp-action="DersEkle">
+                        <input hidden="" name="DersAcmaID" value="@item.DersAcmaID"/>           
+                        <input hidden="" name="DersDurumID" value="1" />
+                        <input hidden="" name="OgrenciID" value="@ViewBag.ogrenci.OgrenciID" />
+                        <button type="submit" class="btn btn-primary">+</button>
+                    </form>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+<h3>Alınan Dersler</h3>
+<table class="table">
+    <tr>
+        <th>Dersin Kodu ve Adı</th>
+        <th>Dersin Türü</th>
+        <th>Teorik</th>
+        <th>Uygulama</th>
+        <th>Kredi</th>
+        <th>ECTS</th>
+        <th>Durum</th>
+        <th>İşlem</th>
+    </tr>
+
+    <tbody id="tableBody">
+
+        @foreach (var item in ViewBag.resultData1)
+        {
+            <tr>
+                <td>@item.DersKodu @item.DersAdi</td>
+                <td>@item.DersTuruAdi</td>
+                <td>@item.Teorik</td>
+                <td>@item.Kredi</td>
+                <td>@item.Uygulama</td>
+                <td>@item.ECTS</td>
+                <td>@item.DersDurumAdi</td>
+                @if(item.DersDurumID == 1 || item.DersDurumID == 2)
+                {
+                    <td>
+                        <form method="post" asp-controller="Ogrenci" asp-action="DersSil">
+                            <input hidden="" name="DersAlmaID" value="@item.DersAlmaID" />
+                            <button type="submit" class="btn btn-danger">-</button>
+                        </form>
+                    </td>
+                }
+                else
+                {
+                    <td></td>
+                }
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+

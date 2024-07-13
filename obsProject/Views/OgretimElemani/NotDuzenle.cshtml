@@ -1,0 +1,31 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    var ogrenci = ViewBag.Ogrenci as dynamic;
+}
+
+
+<h1>Not Düzenle</h1>
+
+<form method="post" asp-controller="OgretimElemani" asp-action="NotDuzenle">
+
+    <input hidden="" type="text" class="form-control" name="OgrenciID" value="@ogrenci.OgrenciID" readonly>
+    <input hidden="" type="text" class="form-control" name="SinavID" value="@ViewBag.Sinav.SinavID" readonly>
+    <input hidden="" type="text" class="form-control" name="DegerlendirmeID" value="@ViewBag.Degerlendirme.DegerlendirmeID" readonly>
+    <div class="mb-3">
+        <label for="ogrenciID" class="form-label">Öğrenci Adı:</label>
+        <input type="text" class="form-control" name="ogrenciAdi" value="@ogrenci.Adi" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="sinavID" class="form-label">Ders Adı:</label>
+
+        <input type="text" class="form-control" name="sinavAdi" value="@ViewBag.DersAdi" readonly>
+
+
+    </div>
+    <div class="mb-3">
+        <label for="not" class="form-label">Sınav Notu</label>
+        <input type="number" class="form-control" id="not" name="SinavNotu" value="@ViewBag.Degerlendirme.SinavNotu">
+    </div>
+    <button type="submit" class="btn btn-primary">Gönder</button>
+</form>

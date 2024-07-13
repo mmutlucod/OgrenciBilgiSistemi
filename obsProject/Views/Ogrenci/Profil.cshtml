@@ -1,0 +1,19 @@
+﻿<h3>Öğrenci Profili</h3><br />
+
+@foreach(var item in ViewBag.resultData)
+{
+    <p><strong>Adı: </strong> @item.Adi</p>
+    <p><strong>Soyadı: </strong> @item.Soyadi</p>
+    <p><strong>T.C. Kimlik No: </strong> @item.TCKimlikNo</p>
+    <p><strong>Doğum Tarihi: </strong> @item.DogumTarihi</p>
+
+    <!-- Diğer öğrenci özelliklerini görüntüle -->
+    <p><strong>Bölüm: </strong> @item.BolumAdi</p>
+    <p><strong>Öğrenci No: </strong> @item.OgrenciNo</p>
+    <p><strong>Kayıt Tarihi: </strong> @item.KayitTarihi</p>
+    <p><strong>Ayrılma Tarihi: </strong> @item.AyrilmaTarihi</p>
+
+    <p><strong>Öğrenci Durumu: </strong> @item.OgrenciDurum</p>
+
+    <p><strong>Danışman Adı: </strong> @item.DanismanAdi @item.DanismanSoyadi</p>
+}

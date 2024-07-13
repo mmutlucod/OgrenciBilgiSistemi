@@ -1,0 +1,88 @@
+﻿@model Sinav
+<h4>Sınav Tanımla</h4>
+<br />
+
+<form asp-controller="OgretimElemani" asp-action="SinavEkle" method="post">
+    <div class="mb-3">
+        <label asp-for="DersKodu" class="form-label">Ders Kodu ve Adı:</label>
+        <select name="DersAcmaID" asp-for="DersKodu" class="form-control">
+            <option value="">-- Ders Seçin --</option>
+            @foreach (var item in ViewBag.Dersler)
+            {
+                <option value="@item.DersAcmaID">@item.DersKodu - @item.DersAdi</option>
+            }
+        </select>
+    </div>
+
+
+    <div class="mb-3">
+        <label asp-for="SinavTuru" class="form-label">Sınav Türü:</label>
+        <select id="SinavTuruID" name="SinavTuruID" asp-for="SinavTuru" class="form-control">
+            <option selected value="-1" disabled>-- Sınav Türü Seçin --</option>
+            @foreach (var item in ViewBag.SinavTurleri)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="EtkiOrani" class="form-label">Etki Oranı:</label>
+        <input type="number" id="EtkiOrani" name="EtkiOrani" asp-for="EtkiOrani" class="form-control" readonly/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="SinavTarihi" class="form-label">Sınav Tarihi:</label>
+        <input name="SinavTarihi" asp-for="SinavTarihi" class="form-control" type="date" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="SinavSaati" class="form-label">Sınav Saati:</label>
+        <input name="SinavSaati" asp-for="SinavSaati" class="form-control" type="time" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Derslik" class="form-label">Derslik:</label>
+        <select name="DerslikID" asp-for="Derslik" class="form-control">
+            <option value="">-- Derslik Seçin --</option>
+            @foreach (var item in ViewBag.Derslikler)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Gozetmen" class="form-label">Gözetmen Adı:</label>
+        <select name="OgretimElemaniID" asp-for="Gozetmen" class="form-control">
+            <option value="">-- Gözetmen Seçin --</option>
+            @foreach (var item in ViewBag.Gozetmenler)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Sınav Ekle</button>
+    </div>
+</form>
+<script>
+    // Sınav Türü'nün değiştiği zaman tetiklenecek fonksiyon
+    function etkiOraniGuncelle() {
+        // Seçilen Sınav Türü'nün değerini al
+        var secilenSinavTuru = document.getElementById("SinavTuruID").value;
+        
+        var etkiOraniInput = document.getElementById("EtkiOrani");
+        if (secilenSinavTuru == 1) { // Örnek olarak sınav türü ID'si 1 olan durumda bir etki oranı belirleyelim
+            etkiOraniInput.value = 40; // Burada Etki Oranı'nı istediğiniz değere göre güncelleyebilirsiniz
+        } else if (secilenSinavTuru == 2) { // Başka bir sınav türü ID'si
+            etkiOraniInput.value = 60; // Bu sınav türü için başka bir etki oranı
+        } else if (secilenSinavTuru == 3) { // Başka bir sınav türü ID'si
+            etkiOraniInput.value = 60; // Bu sınav türü için başka bir etki oranı
+        }
+        else if (secilenSinavTuru == 4) { // Başka bir sınav türü ID'si
+            etkiOraniInput.value = 100; // Bu sınav türü için başka bir etki oranı
+        }
+        else {
+            etkiOraniInput.value = ""; // Diğer durumlarda Etki Oranı'nı boş bırakabilirsiniz veya farklı bir varsayılan değer atayabilirsiniz
+        }
+    }
+
+    // Sınav Türü'nün değişikliğini dinlemek için bir event listener ekleyelim
+    document.getElementById("SinavTuruID").addEventListener("change", etkiOraniGuncelle);
+</script>

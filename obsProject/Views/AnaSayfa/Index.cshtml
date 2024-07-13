@@ -1,0 +1,46 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Öğrenci Bilgi Sistemi";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/ogrenci.css" />
+    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/alertify.js/alertify.bootstrap.min.css" rel="stylesheet" />
+    <script src="~/alertify.js/alertify.min.js"></script>
+
+
+</head>
+<body>
+    <h2></h2>
+
+
+    <div class="container" style="margin-left:5px;">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <form method="post" asp-action="Index" asp-controller="Anasayfa">
+                    <div>
+                        @if (ViewBag.UyariMesaji != null)
+                        {
+                            <div class="alert alert-danger"> @ViewBag.UyariMesaji</div>
+                        }
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Kullanıcı Adı:</label>
+                        <input type="text" id="username" name="adi" class="form-control" placeholder="Kullanıcı Adınız" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Şifre:</label>
+                        <input type="password" id="password" name="parola" class="form-control" placeholder="Şifreniz" required>
+                    </div>
+                    <button type="submit" class="btn12">Giriş Yap</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

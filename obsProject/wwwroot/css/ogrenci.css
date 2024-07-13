@@ -1,0 +1,30 @@
+﻿.container {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn12 {
+    background-color: #ccc;
+    border: 2px solid #888; /* Gri tonunda bir kenarlık rengi */
+    border-radius: 5px;
+    color: #333; /* Gri tonunda metin rengi */
+    padding: 10px 20px; /* Daha belirgin bir buton boyutu için padding ekledim */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+    .btn12:hover {
+        background-color: #bbb; /* Hover durumunda biraz daha koyu gri */
+        border-color: #666; /* Hover durumunda kenarlık rengi */
+    }
