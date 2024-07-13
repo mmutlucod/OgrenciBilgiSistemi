@@ -49,10 +49,57 @@ Proje kapsamında aşağıdaki tablolar oluşturulmuştur:
 
 ## Ekran Görüntüleri
 
-Proje kapsamında geliştirilen öğrenci ve öğretim elemanı panellerinin ekran görüntüleri aşağıdaki gibidir:
-
 ### Öğrenci Paneli
-![Öğrenci Paneli](path/to/student_panel_image.png)
+
+1. **Özlük Bilgileri**
+   ![Özlük Bilgileri](screenshots/ogrenci/1.png)
+   
+2. **Transkript**
+   ![Transkript](screenshots/ogrenci/2.png)
+   
+3. **Ders Programı**
+   ![Ders Programı](screenshots/ogrenci/3.png)
+   
+4. **Dönem Dersleri**
+   ![Dönem Dersleri](screenshots/ogrenci/4.png)
+   
+5. **Bölüm Müfredatı**
+   ![Bölüm Müfredatı](screenshots/ogrenci/5.png)
+   
+6. **Sınav Notları**
+   ![Sınav Notları](screenshots/ogrenci/6.png)
+   
+7. **Sınav Takvimi**
+   ![Sınav Takvimi](screenshots/ogrenci/7.png)
+   
+8. **Ders Kayıt**
+   ![Ders Kayıt](screenshots/ogrenci/8.png)
 
 ### Öğretim Elemanı Paneli
-![Öğretim Elemanı Paneli](path/to/teacher_panel_image.png)
+
+1. **Özlük Bilgileri**
+   ![Özlük Bilgileri](screenshots/egitmen/1.png)
+   
+2. **Danışmanlık Yapılan Öğrenciler**
+   ![Danışmanlık Yapılan Öğrenciler](screenshots/egitmen/2.png)
+   
+3. **Bölüm Müfredatı**
+   ![Bölüm Müfredatı](screenshots/egitmen/3.png)
+   
+4. **Verilen Dersler**
+   ![Verilen Dersler](screenshots/egitmen/4.png)
+   
+5. **Ders Kayıt Onayı**
+   ![Ders Kayıt Onayı](screenshots/egitmen/5.png)
+   
+6. **Ders Programı**
+   ![Ders Programı](screenshots/egitmen/6.png)
+   
+7. **Sınav Tanımlama**
+   ![Sınav Tanımlama](screenshots/egitmen/7.png)
+   
+8. **Sınav Listesi**
+   ![Sınav Listesi](screenshots/egitmen/8.png)
+   
+9. **Sınav Not Girişi**
+   ![Sınav Not Girişi](screenshots/egitmen/9.png)
