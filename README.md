@@ -116,5 +116,5 @@ Projede, birim testler (unit tests) için xUnit kullanılmıştır. Unit testler
 8. **Özlük Bilgileri**
    ![Özlük Bilgileri](screenshots/egitmen/8.png)
    
-9. **Danışamnlık İşlemleri**
+9. **Danışmanlık İşlemleri**
    ![Danışamnlık İşlemleri](screenshots/egitmen/9.png)
